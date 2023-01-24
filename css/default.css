@@ -558,7 +558,7 @@ header {
 	/* Header */
 
 	header {
-		padding: 0 0 0 2.5rem;
+		padding: 0 0 0 3.5rem;
 	}
 
 	.logo {
@@ -643,13 +643,12 @@ header {
 	/* Sections */
 
 	.section {
-		padding-top: 2.2rem;
+		padding: 1.5rem 0 1.5rem 3.5rem;
 	}
 
 	.section-heading {
 		font-size: 1.3rem;
 		justify-self: left;
-		margin-left: 1.5em;
 	}
 
 	.section-images {
