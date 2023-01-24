@@ -173,8 +173,9 @@ header {
 	border-right: 3px solid var(--color-neutral-white);
 }
 
-.link-bold {
+.link-numeric {
 	font-weight: 700;
+	padding-right: 0.2em;
 }
 
 /* Sections */
@@ -194,8 +195,10 @@ header {
 	color: var(--color-neutral-white);
 }
 
-.section-heading-number {
+.section-heading-numeric {
+	font-weight: 700;
 	color: hsla(0, 0%, 100%, 45%);
+	padding-right: 0.5em;
 }
 
 .section-images {
