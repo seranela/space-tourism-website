@@ -964,6 +964,7 @@ header {
 			'section-panels section-images'
 			'section-choices section-images';
 		grid-template-columns: fit-content(100%) 1fr;
+		padding-bottom: 0;
 	}
 
 	.crew-section-heading {
@@ -1010,6 +1011,7 @@ header {
 		align-items: center;
 		gap: 0 3rem;
 		padding-top: 0;
+		padding-bottom: 0;
 	}
 
 	.technology-section-heading {

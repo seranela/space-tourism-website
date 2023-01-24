@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Frontend Mentor Challenge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/default.css">
+	<link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+	<title>Frontend Mentor | Space tourism website</title>
+</head>
+
+<body class="background-technology">
+	<header>
+		<img src="assets/shared/logo.svg" alt="" class="logo">
+
+		<div class="header-horizontal-line"></div>
+
+		<button id="menu-toggle" class="header-nav-button" aria-label="Toggle Menu">
+			<span class="sr-only">Toggle Menu</span>
+		</button>
+
+		<nav class="header-nav" aria-labelledby="menu-toggle" aria-expanded="false">
+			<ol class="header-nav-list">
+				<li>
+					<a href="index.html" class="header-nav-link">
+						<span class="link-bold">00&nbsp;</span>Home
+					</a>
+				</li>
+				<li>
+					<a href="destination.html" class="header-nav-link">
+						<span class="link-bold">01&nbsp;</span>Destination
+					</a>
+				</li>
+				<li>
+					<a href="crew.html" class="header-nav-link header-nav-link-active">
+						<span class="link-bold">02&nbsp;</span>Crew
+					</a>
+				</li>
+				<li>
+					<a href="technology.html" class="header-nav-link">
+						<span class="link-bold">03&nbsp;</span>Technology
+					</a>
+				</li>
+			</ol>
+		</nav>
+	</header>
+
+	<main>
+		<section class="section crew">
+			<h2 class="section-heading crew-section-heading">
+				<span class="section-heading-number">02</span> Meet Your Crew
+			</h2>
+
+			<div class="section-images crew-images">
+				<picture>
+					<source type="image/webp" srcset="assets/crew/image-douglas-hurley.webp">
+					<img src="assets/crew/image-douglas-hurley.png" alt="Douglas Hurley" class="section-image" aria-hidden="false">
+				</picture>
+				<picture>
+					<source type="image/webp" srcset="assets/crew/image-mark-shuttleworth.webp">
+					<img src="assets/crew/image-mark-shuttleworth.png" alt="Mark Shuttleworth" class="section-image hidden" aria-hidden="true">
+				</picture>
+				<picture>
+					<source type="image/webp" srcset="assets/crew/image-victor-glover.webp">
+					<img src="assets/crew/image-victor-glover.png" alt="Victor Glover" class="section-image hidden" aria-hidden="true">
+				</picture>
+				<picture>
+					<source type="image/webp" srcset="assets/crew/image-anousheh-ansari.webp">
+					<img src="assets/crew/image-anousheh-ansari.png" alt="Anousheh Ansari" class="section-image hidden" aria-hidden="true">
+				</picture>
+			</div>
+
+			<fieldset class="section-choices crew-choices">
+				<legend class="sr-only">Pick your crew member</legend>
+
+				<div class="section-choice">
+					<input type="radio" id="tablist_crew_douglas" class="crew-radio" name="tablist_crew" value="tablist_crew_douglas" checked>
+					<label for="tablist_crew_douglas" class="crew-choice-label sr-only">
+						Show Douglas Hurley
+					</label>
+				</div>
+				<div class="section-choice">
+					<input type="radio" id="tablist_crew_mark" class="crew-radio" name="tablist_crew" value="tablist_crew_mark">
+					<label for="tablist_crew_mark" class="crew-choice-label sr-only">
+						Show Mark Shuttleworth
+					</label>
+				</div>
+				<div class="section-choice">
+					<input type="radio" id="tablist_crew_victor" class="crew-radio" name="tablist_crew" value="tablist_crew_victor">
+					<label for="tablist_crew_victor" class="crew-choice-label sr-only">
+						Show Victor Glover
+					</label>
+				</div>
+				<div class="section-choice">
+					<input type="radio" id="tablist_crew_anousheh" class="crew-radio" name="tablist_crew" value="tablist_crew_anousheh">
+					<label for="tablist_crew_anousheh" class="crew-choice-label sr-only">
+						Show Anousheh Ansari
+					</label>
+				</div>
+			</fieldset>
+
+			<div class="section-panels crew-section-panels">
+				<article id="tablist_crew_douglas_panel" class="section-panel" aria-hidden="false">
+					<h3 class="panel-heading crew-panel-heading">
+						<span class="crew-role">Commander</span> Douglas Hurley
+					</h3>
+					<p class="crew-text">Douglas Gerald Hurley is an American engineer,
+						former Marine Corps pilot and former NASA astronaut. He launched
+						into space for the third time as commander of Crew Dragon Demo-2.</p>
+				</article>
+
+				<article id="tablist_crew_mark_panel" class="section-panel hidden" aria-hidden="true">
+					<h3 class="panel-heading crew-panel-heading">
+						<span class="crew-role">Mission Specialist</span> Mark Shuttleworth
+					</h3>
+					<p class="crew-text">Mark Richard Shuttleworth is the founder and CEO
+						of Canonical, the company behind the Linux-based Ubuntu operating
+						system. Shuttleworth became the first South African to travel to
+						space as a space tourist.</p>
+				</article>
+
+				<article id="tablist_crew_victor_panel" class="section-panel hidden" aria-hidden="true">
+					<h3 class="panel-heading crew-panel-heading">
+						<span class="crew-role">Pilot</span> Victor Glover
+					</h3>
+					<p class="crew-text">Pilot on the first operational flight of the
+						SpaceX Crew Dragon to the International Space Station. Glover is
+						a commander in the U.S. Navy where he pilots an F/A-18. He was a
+						crew member of Expedition 64, and served as a station systems
+						flight engineer.</p>
+				</article>
+
+				<article id="tablist_crew_anousheh_panel" class="section-panel hidden" aria-hidden="true">
+					<h3 class="panel-heading crew-panel-heading">
+						<span class="crew-role">Flight Engineer</span> Anousheh Ansari
+					</h3>
+					<p class="crew-text">Anousheh Ansari is an Iranian American engineer
+						and co-founder of Prodea Systems. Ansari was the fourth self-funded
+						space tourist, the first self-funded woman to fly to the ISS, and the
+						first Iranian in space.</p>
+				</article>
+			</div>
+		</section>
+	</main>
+	<script src="js/default.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Frontend Mentor Challenge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/default.css">
+	<link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+	<title>Frontend Mentor | Space tourism website</title>
+</head>
+
+<body class="background-technology">
+	<header>
+		<img src="assets/shared/logo.svg" alt="" class="logo">
+
+		<div class="header-horizontal-line"></div>
+
+		<button id="menu-toggle" class="header-nav-button" aria-label="Toggle Menu">
+			<span class="sr-only">Toggle Menu</span>
+		</button>
+
+		<nav class="header-nav" aria-labelledby="menu-toggle" aria-expanded="false">
+			<ol class="header-nav-list">
+				<li>
+					<a href="index.html" class="header-nav-link">
+						<span class="link-bold">00&nbsp;</span>Home
+					</a>
+				</li>
+				<li>
+					<a href="destination.html" class="header-nav-link header-nav-link-active">
+						<span class="link-bold">01&nbsp;</span>Destination
+					</a>
+				</li>
+				<li>
+					<a href="crew.html" class="header-nav-link">
+						<span class="link-bold">02&nbsp;</span>Crew
+					</a>
+				</li>
+				<li>
+					<a href="technology.html" class="header-nav-link">
+						<span class="link-bold">03&nbsp;</span>Technology
+					</a>
+				</li>
+			</ol>
+		</nav>
+	</header>
+
+	<main>
+		<section class="section destination">
+			<h2 class="section-heading">
+				<span class="section-heading-number">01</span> Pick Your Destination
+			</h2>
+
+			<div class="section-images destination-images">
+				<picture>
+					<source type="image/webp" srcset="assets/destination/image-moon.webp">
+					<img src="assets/destination/image-moon.png" alt="Moon" class="section-image" aria-hidden="false">
+				</picture>
+				<picture>
+					<source type="image/webp" srcset="assets/destination/image-mars.webp">
+					<img src="assets/destination/image-mars.png" alt="Mars" class="section-image hidden" aria-hidden="true">
+				</picture>
+				<picture>
+					<source type="image/webp" srcset="assets/destination/image-europa.webp">
+					<img src="assets/destination/image-europa.png" alt="Europa" class="section-image hidden" aria-hidden="true">
+				</picture>
+				<picture>
+					<source type="image/webp" srcset="assets/destination/image-titan.webp">
+					<img src="assets/destination/image-titan.png" alt="Titan" class="section-image hidden" aria-hidden="true">
+				</picture>
+			</div>
+
+			<fieldset class="section-choices destination-section-choices">
+				<legend class="sr-only">Choose a destination</legend>
+
+				<div class="section-choice">
+					<input type="radio" id="tablist_destination_moon" class="destination-radio sr-only" name="tablist_destination" value="tablist_destination_moon" checked>
+					<label for="tablist_destination_moon" class="destination-choice-label">
+						<span class="sr-only">Show destination </span>Moon
+					</label>
+				</div>
+				<div class="section-choice">
+					<input type="radio" id="tablist_destination_mars" class="destination-radio sr-only" name="tablist_destination" value="tablist_destination_mars">
+					<label for="tablist_destination_mars" class="destination-choice-label">
+						<span class="sr-only">Show destination </span>Mars
+					</label>
+				</div>
+				<div class="section-choice">
+					<input type="radio" id="tablist_destination_europa" class="destination-radio sr-only" name="tablist_destination" value="tablist_destination_europa">
+					<label for="tablist_destination_europa" class="destination-choice-label">
+						<span class="sr-only">Show destination </span>Europa
+					</label>
+				</div>
+				<div class="section-choice">
+					<input type="radio" id="tablist_destination_titan" class="destination-radio sr-only" name="tablist_destination" value="tablist_destination_titan">
+					<label for="tablist_destination_titan" class="destination-choice-label">
+						<span class="sr-only">Show destination </span>Titan
+					</label>
+				</div>
+			</fieldset>
+
+			<div class="section-panels destination-section-panels">
+				<article id="tablist_destination_moon_panel" class="section-panel" aria-hidden="false">
+					<h3 class="panel-heading destination-panel-heading">Moon</h3>
+					<p class="destination-panel-text">See our planet as you've never seen it before. A perfect relaxing trip away
+						to help regain perspective and come back refreshed. While you're there,
+						take in some history by visiting the Luna 2 and Apollo 11 landing sites.</p>
+					<div class="stats">
+						<div>
+							<h4 class="stat-heading">Avg. Distance</h4>
+							<p class="stat-amount">384,400 km</p>
+						</div>
+						<div>
+							<h4 class="stat-heading">Est. Travel Time</h4>
+							<p class="stat-amount">3 days</p>
+						</div>
+					</div>
+				</article>
+
+				<article id="tablist_destination_mars_panel" class="section-panel hidden" aria-hidden="true">
+					<h3 class="panel-heading destination-panel-heading">Mars</h3>
+					<p class="destination-panel-text">Don't forget to pack your hiking boots. You'll need them to tackle
+						Olympus Mons, the tallest planetary mountain in our solar system.
+						It's two and a half times the size of Everest!</p>
+					<div class="stats">
+						<div>
+							<h4 class="stat-heading">Avg. Distance</h4>
+							<p class="stat-amount">225 mil. km</p>
+						</div>
+						<div>
+							<h4 class="stat-heading">Est. Travel Time</h4>
+							<p class="stat-amount">9 months</p>
+						</div>
+					</div>
+				</article>
+
+				<article id="tablist_destination_europa_panel" class="section-panel hidden" aria-hidden="true">
+					<h3 class="panel-heading destination-panel-heading">Europa</h3>
+					<p class="destination-panel-text">The smallest of the four Galilean moons orbiting Jupiter, Europa is a
+						winter lover's dream. With an icy surface, it's perfect for a bit of
+						ice skating, curling, hockey, or simple relaxation in your snug wintery
+						cabin.</p>
+					<div class="stats">
+						<div>
+							<h4 class="stat-heading">Avg. Distance</h4>
+							<p class="stat-amount">628 mil. km</p>
+						</div>
+						<div>
+							<h4 class="stat-heading">Est. Travel Time</h4>
+							<p class="stat-amount">3 years</p>
+						</div>
+					</div>
+				</article>
+
+				<article id="tablist_destination_titan_panel" class="section-panel hidden" aria-hidden="true">
+					<h3 class="panel-heading destination-panel-heading">Titan</h3>
+					<p class="destination-panel-text">The only moon known to have a dense atmosphere other than Earth,
+						Titan is a home away from home (just a few hundred degrees colder!).
+						As a bonus, you get striking views of the Rings of Saturn.</p>
+					<div class="stats">
+						<div>
+							<h4 class="stat-heading">Avg. Distance</h4>
+							<p class="stat-amount">1.6 bil. km</p>
+						</div>
+						<div>
+							<h4 class="stat-heading">Est. Travel Time</h4>
+							<p class="stat-amount">7 years</p>
+						</div>
+					</div>
+				</article>
+			</div>
+		</section>
+	</main>
+	<script src="js/default.js"></script>
+</body>
+
+</html>

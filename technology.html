@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Frontend Mentor Challenge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/default.css">
+	<link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+	<title>Frontend Mentor | Space tourism website</title>
+</head>
+
+<body class="background-technology">
+	<header>
+		<img src="assets/shared/logo.svg" alt="" class="logo">
+
+		<div class="header-horizontal-line"></div>
+
+		<button id="menu-toggle" class="header-nav-button" aria-label="Toggle Menu">
+			<span class="sr-only">Toggle Menu</span>
+		</button>
+
+		<nav class="header-nav" aria-labelledby="menu-toggle" aria-expanded="false">
+			<ol class="header-nav-list">
+				<li>
+					<a href="index.html" class="header-nav-link">
+						<span class="link-bold">00&nbsp;</span>Home
+					</a>
+				</li>
+				<li>
+					<a href="destination.html" class="header-nav-link">
+						<span class="link-bold">01&nbsp;</span>Destination
+					</a>
+				</li>
+				<li>
+					<a href="crew.html" class="header-nav-link">
+						<span class="link-bold">02&nbsp;</span>Crew
+					</a>
+				</li>
+				<li>
+					<a href="technology.html" class="header-nav-link header-nav-link-active">
+						<span class="link-bold">03&nbsp;</span>Technology
+					</a>
+				</li>
+			</ol>
+		</nav>
+	</header>
+
+	<main>
+		<section class="section technology">
+			<h2 class="section-heading technology-section-heading">
+				<span class="section-heading-number">03</span> Space Launch 101
+			</h2>
+
+			<div class="section-images technology-images">
+				<picture>
+					<source media="(min-width: 992px)" srcset="assets/technology/image-launch-vehicle-portrait.jpg">
+					<img src="assets/technology/image-launch-vehicle-landscape.jpg" alt="Space vehicle launching" class="section-image technology-image" aria-hidden="false">
+				</picture>
+				<picture>
+					<source media="(min-width: 992px)" srcset="assets/technology/image-spaceport-portrait.jpg">
+					<img src="assets/technology/image-spaceport-landscape.jpg" alt="Spaceport" class="section-image technology-image hidden" aria-hidden="true">
+				</picture>
+				<picture>
+					<source media="(min-width: 992px)" srcset="assets/technology/image-space-capsule-portrait.jpg">
+					<img src="assets/technology/image-space-capsule-landscape.jpg" alt="Space capsule in space" class="section-image technology-image hidden" aria-hidden="true">
+				</picture>
+			</div>
+
+			<fieldset class="section-choices technology-choices">
+				<legend class="sr-only">Choose a technology</legend>
+
+				<div class="section-choice">
+					<input type="radio" id="tablist_technology_launch" class="technology-radio" name="tablist_technology" value="tablist_technology_launch" checked>
+					<label for="tablist_technology_launch" class="technology-choice-label technology-choice-label-active">
+						1<span class="sr-only">&nbsp;Show Launch Vehicle</span>
+					</label>
+				</div>
+				<div class="section-choice">
+					<input type="radio" id="tablist_technology_spaceport" class="technology-radio" name="tablist_technology" value="tablist_technology_spaceport">
+					<label for="tablist_technology_spaceport" class="technology-choice-label">
+						2<span class="sr-only">&nbsp;Show Spaceport</span>
+					</label>
+				</div>
+				<div class="section-choice">
+					<input type="radio" id="tablist_technology_capsule" class="technology-radio" name="tablist_technology" value="tablist_technology_capsule">
+					<label for="tablist_technology_capsule" class="technology-choice-label">
+						3<span class="sr-only">&nbsp;Show Space Capsule</span>
+					</label>
+				</div>
+			</fieldset>
+
+			<div class="section-panels technology-section-panels">
+				<article id="tablist_technology_launch_panel" class="section-panel technology-section-panel" aria-hidden="false">
+					<h3 class="technology-panel-subheading">The Terminology...</h3>
+					<h4 class="panel-heading technology-panel-heading">Launch vehicle</h4>
+					<p class="technology-text">A launch vehicle or carrier rocket is a
+						rocket-propelled vehicle used to carry a payload from Earth's surface
+						to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket
+						is the most powerful in operation. Standing 150 metres tall, it's
+						quite an awe-inspiring sight on the launch pad!</p>
+				</article>
+
+				<article id="tablist_technology_spaceport_panel" class="section-panel technology-section-panel hidden" aria-hidden="true">
+					<h3 class="technology-panel-subheading">The Terminology...</h3>
+					<h4 class="panel-heading technology-panel-heading">Spaceport</h4>
+					<p class="technology-text">A spaceport or cosmodrome is a site for
+						launching (or receiving) spacecraft, by analogy to the seaport for
+						ships or airport for aircraft. Based in the famous Cape Canaveral,
+						our spaceport is ideally situated to take advantage of the Earth's
+						rotation for launch.</p>
+				</article>
+
+				<article id="tablist_technology_capsule_panel" class="section-panel technology-section-panel hidden" aria-hidden="true">
+					<h3 class="technology-panel-subheading">The Terminology&hellip;</h3>
+					<h4 class="panel-heading technology-panel-heading">Space capsule</h4>
+					<p class="technology-text">A space capsule is an often-crewed spacecraft
+						that uses a blunt-body reentry capsule to reenter the Earth's atmosphere
+						without wings. Our capsule is where you'll spend your time during the
+						flight. It includes a space gym, cinema, and plenty of other activities
+						to keep you entertained.</p>
+				</article>
+			</div>
+		</section>
+	</main>
+	<script src="js/default.js"></script>
+</body>
+
+</html>

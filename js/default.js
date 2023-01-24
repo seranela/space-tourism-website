@@ -2,7 +2,6 @@
 
 const menuButton = document.querySelector('#menu-toggle');
 const menuNav = document.querySelector('.header-nav');
-const menuLinks = document.querySelectorAll('.header-nav-link');
 
 function resizeUpdate() {
 	if (document.body.offsetWidth >= 768) {
@@ -26,72 +25,6 @@ function toggleMenu() {
 
 window.addEventListener('resize', resizeUpdate, false);
 menuButton.addEventListener('click', toggleMenu, false);
-
-/* --- Section Switcher --- */
-
-function changeSection(sectionNumber) {
-	const navLinks = document.querySelectorAll('.header-nav-link');
-	for (let i = 0; i < navLinks.length; ++i) {
-		if ((i+1) == sectionNumber) {
-			navLinks[i].classList.add('header-nav-link-active');
-		} else {
-			navLinks[i].classList.remove('header-nav-link-active');
-		}
-	}
-
-	switch (sectionNumber) {
-		case 1:
-			// Intro
-			document.body.classList.remove('background-destinations', 'background-crew', 'background-technology');
-			document.body.classList.add('background-intro');
-			break;
-		case 2:
-			// Destinations
-			document.body.classList.remove('background-intro', 'background-crew', 'background-technology');
-			document.body.classList.add('background-destinations');
-			break;
-		case 3:
-			// Crew
-			document.body.classList.remove('background-intro', 'background-destinations', 'background-technology');
-			document.body.classList.add('background-crew');
-			break;
-		case 4:
-			// Technology
-			document.body.classList.remove('background-intro', 'background-destinations', 'background-crew');
-			document.body.classList.add('background-technology');
-			break;
-	}
-
-	const sections = document.querySelectorAll('.section');
-	for (let i = 0; i < sections.length; ++i) {
-		if ((i+1) === sectionNumber) {
-			sections[i].classList.remove('hidden');
-			sections[i].setAttribute('aria-hidden', false);
-		} else {
-			sections[i].classList.add('hidden');
-			sections[i].setAttribute('aria-hidden', true);
-		}
-	}
-}
-
-// Intro "EXPLORE" button
-const exploreButton = document.querySelector('#explore-button');
-exploreButton.addEventListener('click', (e) => {
-	e.preventDefault();
-	changeSection(2);
-}, false);
-
-for (let i = 0; i < menuLinks.length; ++i) {
-	menuLinks[i].addEventListener('click', (e) => {
-		e.preventDefault();
-		if (menuNav.getAttribute('aria-expanded') === 'true') {
-			menuNav.setAttribute('aria-expanded', false);
-			menuNav.classList.remove('header-nav-show');
-			menuButton.classList.remove('header-nav-button-close');
-		}
-		changeSection(parseInt(e.currentTarget.dataset.section));
-	}, false);
-}
 
 /* --- Sub-Info Panel Switcher --- */
 
