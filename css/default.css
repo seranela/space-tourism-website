@@ -884,6 +884,7 @@ header {
 
 	.intro {
 		display: flex;
+		justify-content: space-between;
 		align-items: center;
 		margin-top: 11rem;
 	}
@@ -895,7 +896,7 @@ header {
 	.intro-body {
 		text-align: left;
 		flex: 1;
-		max-width: 29rem;
+		max-width: 46rem;
 	}
 
 	.space-large {
@@ -904,7 +905,6 @@ header {
 
 	.explore-container {
 		flex: 1;
-		max-width: 18rem;
 		display: flex;
 		justify-content: center;
 	}
