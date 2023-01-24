@@ -141,7 +141,8 @@ header {
 	left: 32%;
 }
 
-.header-nav-link {
+.header-nav-link,
+.header-nav-link-active {
 	height: 100%;
 	display: flex;
 	align-items: center;
@@ -574,25 +575,21 @@ header {
 		text-transform: uppercase;
 		color: var(--color-neutral-white);
 	}
-	
+
 	.header-nav-show {
 		display: block;
 	}
-	
-	.header-nav-link {
+
+	.header-nav-link,
+	.header-nav-link-active {
 		height: 100%;
 		display: flex;
 		align-items: center;
 		text-decoration: none;
 		color: var(--color-neutral-white);
-		/*border-bottom: 3px solid transparent;*/
 		position: relative;
 	}
-	
-	/*.header-nav-link:hover {
-		border-bottom: 3px solid #979797;
-	}*/
-	
+
 	.header-nav-link::after {
 		/* Expanding hyperlink underline effect */
 		content: '';
