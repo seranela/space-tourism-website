@@ -66,29 +66,3 @@ const techButtons = document.querySelectorAll('.technology-radio');
 for (let i = 0; i < techButtons.length; ++i) {
 	techButtons[i].addEventListener('change', changePanel, false);
 }
-
-/* --- Transitions --- */
-
-/*function onSlideOutFinished(section) {
-	section.remove();
-}
-
-function onSlideInFinished(section) {
-	section.classList.remove('slide-in');
-}
-
-function slideToSection(sectionNumber) {
-	if (sectionNumber === 2) {
-		const sectionLeave = document.querySelector('.intro');
-		sectionLeave.classList.add('slide-out');
-		sectionLeave.addEventListener('transitionend', () => {
-			onSlideOutFinished(sectionLeave);
-		}, false);
-
-		const sectionEnter = document.querySelector('.destination');
-		sectionEnter.classList.add('slide-in');
-		sectionEnter.addEventListener('transitionend', () => {
-			onSlideInFinished(sectionEnter);
-		}, false);
-	}
-}*/
