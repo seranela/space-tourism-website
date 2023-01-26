@@ -29,18 +29,20 @@ menuButton.addEventListener('click', toggleMenu, false);
 /* --- Sub-Info Panel Switcher --- */
 
 function changePanel(e) {
-	const currentPanelId = `${e.target.value}_panel`;
+	const selectedPanelId = `${e.target.value}_panel`;
 	const sectionId = e.target.value.split('_')[1];
 	const section = document.querySelector(`.${sectionId}`);
 	const panels = section.querySelectorAll('.section-panel');
 	const images = section.querySelectorAll('.section-image');
 	for (let i = 0; i < panels.length; ++i) {
-		if (panels[i].id === currentPanelId) {
+		if (panels[i].id === selectedPanelId) {
+			// Show
 			images[i].classList.remove('hidden');
 			images[i].setAttribute('aria-hidden', false);
 			panels[i].classList.remove('hidden');
 			panels[i].setAttribute('aria-hidden', false);
 		} else {
+			// Hide
 			panels[i].classList.add('hidden');
 			panels[i].setAttribute('aria-hidden', true);
 			images[i].classList.add('hidden');
