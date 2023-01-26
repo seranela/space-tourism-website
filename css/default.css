@@ -641,7 +641,7 @@ header {
 	/* Sections */
 
 	.section {
-		padding: 1.5rem var(--spacing-mid-screen);
+		padding: var(--spacing-small-screen) var(--spacing-mid-screen);
 	}
 
 	.section-panel {
