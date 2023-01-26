@@ -49,20 +49,8 @@ function changePanel(e) {
 	}
 }
 
-// Destination info buttons
-const infoButtons = document.querySelectorAll('.destination-radio');
+// Destination, Crew and Technology info buttons
+const infoButtons = document.querySelectorAll('.destination-radio, .crew-radio, .technology-radio');
 for (let i = 0; i < infoButtons.length; ++i) {
 	infoButtons[i].addEventListener('change', changePanel, false);
-}
-
-// Crew info buttons
-const crewButtons = document.querySelectorAll('.crew-radio');
-for (let i = 0; i < crewButtons.length; ++i) {
-	crewButtons[i].addEventListener('change', changePanel, false);
-}
-
-// Technology info buttons
-const techButtons = document.querySelectorAll('.technology-radio');
-for (let i = 0; i < techButtons.length; ++i) {
-	techButtons[i].addEventListener('change', changePanel, false);
 }
