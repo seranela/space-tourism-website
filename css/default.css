@@ -393,8 +393,8 @@ header {
 .destination-radio:focus + .destination-choice-label,
 .crew-radio:focus,
 .technology-radio:focus + .technology-choice-label {
-	outline: 2px dotted;
-	outline-offset: 2px;
+	outline: 2px dotted white;
+	outline-offset: 3px;
 }
 
 .destination-panel-heading {
