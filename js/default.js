@@ -28,8 +28,8 @@ menuButton.addEventListener('click', toggleMenu, false);
 
 /* --- Sub-Info Panel Switcher --- */
 
-function changePanel(e) {
-	const selectedPanelId = `${e.target.value}_panel`;
+function changePanel(choice) {
+	const selectedPanelId = `${choice.value}_panel`;
 	const panels = document.querySelectorAll('.section-panel');
 	const images = document.querySelectorAll('.section-image');
 	for (let i = 0; i < panels.length; ++i) {
@@ -52,5 +52,12 @@ function changePanel(e) {
 // Destination, Crew and Technology info buttons
 const infoButtons = document.querySelectorAll('.destination-radio, .crew-radio, .technology-radio');
 for (let i = 0; i < infoButtons.length; ++i) {
-	infoButtons[i].addEventListener('change', changePanel, false);
+	infoButtons[i].addEventListener('change', (e) => {
+		changePanel(e.target);
+	}, false);
 }
+
+// Panel info resets when page is refreshed, but user input choice doesn't.
+// Get user's last radio input choice and reset panels based on user's last choice.
+const usersChoice = document.querySelector('input[type="radio"]:checked');
+changePanel(usersChoice);
