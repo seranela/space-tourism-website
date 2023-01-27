@@ -30,10 +30,8 @@ menuButton.addEventListener('click', toggleMenu, false);
 
 function changePanel(e) {
 	const selectedPanelId = `${e.target.value}_panel`;
-	const sectionId = e.target.value.split('_')[1];
-	const section = document.querySelector(`.${sectionId}`);
-	const panels = section.querySelectorAll('.section-panel');
-	const images = section.querySelectorAll('.section-image');
+	const panels = document.querySelectorAll('.section-panel');
+	const images = document.querySelectorAll('.section-image');
 	for (let i = 0; i < panels.length; ++i) {
 		if (panels[i].id === selectedPanelId) {
 			// Show
